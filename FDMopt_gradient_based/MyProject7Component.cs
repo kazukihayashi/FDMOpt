@@ -59,7 +59,7 @@ namespace ForceDensityMethod
         public FDMmain()
             : base("ForceDensityMethod", "FDMopt",
                 "Opt using FDM",
-                "Extra", "sub")
+                "Math", "Script")
         {}
 
         public override void CreateAttributes()
