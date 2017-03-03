@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gradient-Based FDM", "FDMopt_gradient_based\Gradient-Based FDM.csproj", "{A113A308-6421-4452-8B6F-54F1004D93D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug32|Any CPU = Debug32|Any CPU
+		Debug64|Any CPU = Debug64|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A113A308-6421-4452-8B6F-54F1004D93D0}.Debug32|Any CPU.ActiveCfg = Debug32|Any CPU
+		{A113A308-6421-4452-8B6F-54F1004D93D0}.Debug32|Any CPU.Build.0 = Debug32|Any CPU
+		{A113A308-6421-4452-8B6F-54F1004D93D0}.Debug64|Any CPU.ActiveCfg = Debug64|Any CPU
+		{A113A308-6421-4452-8B6F-54F1004D93D0}.Debug64|Any CPU.Build.0 = Debug64|Any CPU
+		{A113A308-6421-4452-8B6F-54F1004D93D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A113A308-6421-4452-8B6F-54F1004D93D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

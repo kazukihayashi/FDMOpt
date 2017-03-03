@@ -1,0 +1,3410 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+LibOptimization
+</name>
+</assembly>
+<members>
+<member name="P:LibOptimization.Optimization.clsOptNelderMeadWiki.Iteration">
+	<summary>Max iteration count(Default:5,000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptNelderMeadWiki.EPS">
+	<summary>Epsilon(Default:0.000001) for Criterion</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptNelderMeadWiki.Refrection">
+	<summary>Refrection coeffcient(default:1.0)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptNelderMeadWiki.Expantion">
+	<summary>Expantion coeffcient(default:2.0)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptNelderMeadWiki.Contraction">
+	<summary>Contraction coeffcient(default:-0.5)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptNelderMeadWiki.Shrink">
+	<summary>Shrink coeffcient(default:0.5)</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMeadWiki.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Optimize Function</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMeadWiki.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks>
+ All vertexs are made at random.
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMeadWiki.Init(System.Double[][])">
+	<summary>
+ Init
+ </summary>
+	<param name="ai_initPoint"></param>
+	<remarks>
+ Set simplex
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMeadWiki.DoIteration(System.Int32)">
+	<summary>
+ Do optimization
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptNelderMeadWiki.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMeadWiki.GetLastErrorInfomation">
+	<summary>
+ Get recent error infomation
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMeadWiki.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptNelderMeadWiki.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMeadWiki.GetCentroid(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint})">
+	<summary>
+ Calc Centroid
+ </summary>
+	<param name="ai_vertexs"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMeadWiki.ModifySimplex(LibOptimization.Optimization.clsPoint,LibOptimization.Optimization.clsPoint,System.Double)">
+	<summary>
+ Simplex
+ </summary>
+	<param name="ai_tgt">Target vertex</param>
+	<param name="ai_base">Base vertex</param>
+	<param name="ai_coeff">Coeffcient</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMeadWiki.CalcShrink(System.Double)">
+	<summary>
+ Shrink(Except best point)
+ </summary>
+	<param name="ai_coeff">Shrink coeffcient</param>
+	<remarks>
+	</remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptNelderMeadWiki">
+	<summary>
+ Nelder Mead Method wikipedia ver
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+  -Also known as "Down hill simplex" or "simplex method".
+ 
+ Reffrence:
+ http://ja.wikipedia.org/wiki/Nelder-Mead%E6%B3%95
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.#ctor(LibOptimization.Optimization.clsFireFly)">
+	<summary>
+ copy constructor
+ </summary>
+	<param name="ai_vertex"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ constructor
+ </summary>
+	<param name="ai_func"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.#ctor(LibOptimization.Optimization.absObjectiveFunction,System.Collections.Generic.List{System.Double})">
+	<summary>
+ constructor
+ </summary>
+	<param name="ai_func"></param>
+	<param name="ai_vars"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.#ctor(LibOptimization.Optimization.absObjectiveFunction,System.Double[])">
+	<summary>
+ constructor
+ </summary>
+	<param name="ai_func"></param>
+	<param name="ai_vars"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.#ctor(LibOptimization.Optimization.absObjectiveFunction,System.Int32)">
+	<summary>
+ constructor
+ </summary>
+	<param name="ai_func"></param>
+	<param name="ai_dim"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.CompareTo(System.Object)">
+	<summary>
+ Compare(ICompareble)
+ </summary>
+	<param name="ai_obj"></param>
+	<returns></returns>
+	<remarks>
+ larger Me than obj is -1. smaller Me than obj is 1.
+ Equal is return to Zero
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.ReEvaluate">
+	<summary>
+ Re Evaluate
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.GetFunc">
+	<summary>
+ Get Function
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsFireFly.Eval">
+	<summary>
+ EvaluateValue
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.InitValue(System.Double,System.Random)">
+	<summary>
+ Init
+ </summary>
+	<param name="ai_range">-ai_range to ai_range</param>
+	<param name="ai_rand">Random object</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.Copy">
+	<summary>
+ Copy
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsFireFly.Copy(LibOptimization.Optimization.clsFireFly)">
+	<summary>
+ Copy
+ </summary>
+	<param name="ai_point"></param>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsFireFly">
+	<summary>
+ Firefly class
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchEllipsoid.#ctor(System.Int32)">
+	<summary>
+ Default constructor
+ </summary>
+	<param name="ai_dim">Set dimension</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchEllipsoid.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="ai_var"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchEllipsoid">
+	<summary>
+ Benchmark function
+ Ellipsoid function
+ </summary>
+	<remarks>
+ Minimum:
+  F(0,...,0) = 0
+ Range:
+  -5.12 to 5.12
+ Referrence:
+ 小林重信, "実数値GAのフロンティア"，人工知能学会誌 Vol. 24, No. 1, pp.147-162 (2009)
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsEval.#ctor(System.Int32,System.Double)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_index"></param>
+	<param name="ai_eval"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsEval.SetEval(System.Int32,System.Double)">
+	<summary>
+ Eval
+ </summary>
+	<param name="ai_index"></param>
+	<param name="ai_eval"></param>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsEval.Eval">
+	<summary>
+ get evaluate value
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsEval.Index">
+	<summary>
+ get index
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsEval.CompareTo(System.Object)">
+	<summary>
+ Compare(ICompareble)
+ </summary>
+	<param name="ai_obj"></param>
+	<returns></returns>
+	<remarks>
+ larger Me than obj is -1. smaller Me than obj is 1.
+ Equal is return to Zero
+ </remarks>
+</member><member name="T:LibOptimization.Optimization.clsEval">
+	<summary>
+ Eval
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchGriewank.#ctor(System.Int32)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchGriewank.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="ai_var"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchGriewank">
+	<summary>
+ Benchmark function
+ Griewank function
+ </summary>
+	<remarks>
+ Minimum:
+  F(0,...,0) = 0
+ Range:
+  -512 to 512
+ Referrence:
+ http://mikilab.doshisha.ac.jp/dia/research/pdga/archive/doc/ga2k_performance.pdf
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGASPX.Iteration">
+	<summary>Max iteration count(Default:20000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGASPX.EPS">
+	<summary>Epsilon(Default:1e-8) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGASPX.IsUseCriterion">
+	<summary>Use criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGASPX.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGASPX.UpperBounds">
+	<summary>Upper bound(limit solution space)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGASPX.LowerBounds">
+	<summary>Lower bound(limit solution space)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGASPX.PopulationSize">
+	<summary>Population Size(Default:n*33)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGASPX.ChildrenSize">
+	<summary>Children Size(Default:n*10)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptRealGASPX.m_parents">
+	<summary>population</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGASPX.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Optimize Function</param>
+	<remarks>
+ "n" is function dimension.
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGASPX.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGASPX.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGASPX.UseEliteStrategy(System.Double)">
+	<summary>
+ using Elite Strategy
+ </summary>
+	<param name="ai_density">density</param>
+	<remarks>
+ Elite strategy
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGASPX.SelectParent(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint},System.Int32)">
+	<summary>
+ Select Parent
+ </summary>
+	<param name="ai_population"></param>
+	<param name="ai_parentSize"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGASPX.CrossOverSPX(System.Int32,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.Int32,LibOptimization.Optimization.clsPoint}})">
+	<summary>
+ Simplex Crossover
+ </summary>
+	<param name="ai_childSize"></param>
+	<param name="ai_parents"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGASPX.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGASPX.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGASPX.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptRealGASPX">
+	<summary>
+ Real-coded Genetic Algorithm
+ SPX(Simplex Crossover) + JGG
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+  -Cross over algorithm is SPX(Simplex Crossover).
+  -Alternation of generation algorithm is JGG.
+ 
+ Refference:
+ 樋口 隆英, 筒井 茂義, 山村 雅幸, "実数値GAにおけるシンプレクス交叉", 人工知能学会論文誌Vol. 16 (2001) No. 1 pp.147-155
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptTemplate.EPS">
+	<summary>
+ epsilon(Default:1e-8) for Criterion
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptTemplate.IsUseCriterion">
+	<summary>
+ Use criterion
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptTemplate.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptTemplate.Iteration">
+	<summary>
+ Max iteration count(Default:10,000)
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptTemplate.PopulationSize">
+	<summary>
+ Population Size(Default:100)
+ </summary>
+</member><member name="M:LibOptimization.Optimization.clsOptTemplate.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Objective Function</param>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptTemplate.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptTemplate.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptTemplate.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptTemplate.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptTemplate.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptTemplate">
+	<summary>
+ optimize template
+ </summary>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptNewtonMethod.Iteration">
+	<summary>Max iteration count(Default:5,000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptNewtonMethod.EPS">
+	<summary>Epsilon(Default:1e-8) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptNewtonMethod.ALPHA">
+	<summary>hessian matrix coefficient(Default:1.0)</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptNewtonMethod.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Optimize Function</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNewtonMethod.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNewtonMethod.Init(System.Double[])">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNewtonMethod.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptNewtonMethod.Result">
+	<summary>
+ Result
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptNewtonMethod.Results">
+	<summary>
+ Result for debug.(not implementation)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNewtonMethod.GetLastErrorInfomation">
+	<summary>
+ Get recent error infomation
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNewtonMethod.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptNewtonMethod">
+	<summary>
+ Newton Method
+ </summary>
+	<remarks>
+ Features:
+  -Use second derivertive.
+  -Second order conversion.
+ 
+ Refference:
+ 金谷健一, "これならわかる最適化数学－基礎原理から計算手法まで－", 共立出版株式会社 2007 初版第7刷, pp79-84 
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ 
+ Memo:
+ 最適化で微分を用いて求める手法のことを「勾配法」という。
+ 最大値を求めることを山登り法、最小値の場合は最急降下法とよばれる。
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchShubertsFunction.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchShubertsFunction.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchShubertsFunction">
+	<summary>
+ Benchmark function
+ ShubertsFunction
+ </summary>
+	<remarks>
+ Minimum:
+  Fmin = −186.7309
+ Range:
+  −10≦x1 , x2≦10
+ Referrence:
+ [1]Test fXin-She Yang, "Test Problems in Optimization", arXiv(http://arxiv.org/abs/1008.0549)
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchEasom.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchEasom.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="ai_var"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchEasom">
+	<summary>
+ Benchmark function
+ Easom function
+ </summary>
+	<remarks>
+ Minimum:
+  F(PI,...,PI) = -1
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.Iteration">
+	<summary>Max iteration count(Default:20000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.EPS">
+	<summary>Epsilon(Default:0.000001) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.IsUseCriterion">
+	<summary>Use criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.SwarmSize">
+	<summary>Swarm Size(Default:100)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.Weight">
+	<summary>adaptive inertia weight(Default:1.0)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.WeightMax">
+	<summary>Weight max for adaptive weight(Default:0.9).</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.WeightMin">
+	<summary>Weight min for adaptive weight(Default:0.4).</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.C1">
+	<summary>velocity coefficient(affected by personal best)(Default:1.49445)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.C2">
+	<summary>velocity coefficient(affected by global best)(Default:1.49445)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.ChaoticMode">
+	<summary>Inertial weight strategie</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptPSOChaoticIW.EnumChaoticInertiaWeightMode.CDIW">
+	<summary>Charotic Decrease Inertia Weight</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptPSOChaoticIW.EnumChaoticInertiaWeightMode.CRIW">
+	<summary>Charotic Random Inertia Weight</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOChaoticIW.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOChaoticIW.Init">
+	<summary>
+ Initialize
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOChaoticIW.DoIteration(System.Int32)">
+	<summary>
+ Do optimize
+ </summary>
+	<param name="ai_iteration"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOChaoticIW.IsRecentError">
+	<summary>
+ Recent Error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.Result">
+	<summary>
+ Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOChaoticIW.Results">
+	<summary>
+ for Debug
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptPSOChaoticIW">
+	<summary>
+ Particle Swarm Optimization using Chaotic inertia weight(CDIW-PSO, CRIW-PSO)
+ </summary>
+	<remarks>
+ Features:
+  -Swarm Intelligence algorithm.
+  -Derivative free optimization algorithm.
+ 
+ Refference:
+ [1]Y. Feng, G. Teng, A. Wang, Y.M. Yao, "Chaotic inertia weight in particle swarm optimization", in: Second International Conference on Innovative Computing, Information and Control (ICICIC 07), 2007, pp. 475–1475.
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptFA.EPS">
+	<summary>
+ epsilon(Default:1e-8) for Criterion
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptFA.IsUseCriterion">
+	<summary>
+ Use criterion
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptFA.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptFA.Iteration">
+	<summary>
+ Max iteration count(Default:5,000)
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptFA.PopulationSize">
+	<summary>
+ Population Size(Default:50)
+ </summary>
+</member><member name="F:LibOptimization.Optimization.clsOptFA.m_fireflies">
+	<summary>
+ Fire Fly
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptFA.Beta0">
+	<summary>
+ attractiveness base
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptFA.Gamma">
+	<summary>
+ light absorption coefficient(Default:1.0)
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptFA.Alpha">
+	<summary>
+ randomization parameter
+ </summary>
+</member><member name="M:LibOptimization.Optimization.clsOptFA.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Objective Function</param>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptFA.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptFA.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptFA.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptFA.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptFA.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptFA">
+	<summary>
+ Firefly Algorithm
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+  -for Mulitimodal optimization
+ 
+ Refference:
+ [1]X. S. Yang, “Firefly algorithms for multimodal optimization,” in Proceedings of the 5th International Conference on Stochastic Algorithms: Foundation and Applications (SAGA '09), vol. 5792 of Lecture notes in Computer Science, pp. 169–178, 2009.
+ [2]Firefly Algorithm - http://www.mathworks.com/matlabcentral/fileexchange/29693-firefly-algorithm
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.Iteration">
+	<summary>Max iteration count(Default:20000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.EPS">
+	<summary>Epsilon(Default:0.000001) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.IsUseCriterion">
+	<summary>Use criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.SwarmSize">
+	<summary>Swarm Size(Default:100)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.Weight">
+	<summary>adaptive inertia weight(Default:1.0)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.WeightMax">
+	<summary>Weight max for adaptive weight(Default:0.9).</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.WeightMin">
+	<summary>Weight min for adaptive weight(Default:0.4).</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.C1">
+	<summary>velocity coefficient(affected by personal best)(Default:1.49445)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.C2">
+	<summary>velocity coefficient(affected by global best)(Default:1.49445)</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOLDIW.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOLDIW.Init">
+	<summary>
+ Initialize
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOLDIW.DoIteration(System.Int32)">
+	<summary>
+ Do optimize
+ </summary>
+	<param name="ai_iteration"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOLDIW.IsRecentError">
+	<summary>
+ Recent Error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.Result">
+	<summary>
+ Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOLDIW.Results">
+	<summary>
+ for Debug
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptPSOLDIW">
+	<summary>
+ Particle Swarm Optimization using Linear Decrease Inertia Weight(LDIW-PSO)
+ </summary>
+	<remarks>
+ Features:
+  -Swarm Intelligence algorithm.
+  -Derivative free optimization algorithm.
+ 
+ Refference:
+ [1]Y. Shi and Russell C. Eberhart, "Empirical Study of Particle Swarm Optimization, Proceeding Congress on Evolutionary Computation 1999, Piscataway, 1945-1949
+ </remarks>
+</member><member name="T:LibOptimization.MathUtil.clsEasyVector.VectorDirection">
+	<summary>
+ Vector direction.
+ Row vector or Column vector.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.#ctor">
+	<summary>
+ Default construcotr
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.#ctor(LibOptimization.MathUtil.clsEasyVector)">
+	<summary>
+ Copy constructor
+ </summary>
+	<param name="ai_base"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.#ctor(System.Int32,LibOptimization.MathUtil.clsEasyVector.VectorDirection)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_dim"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.#ctor(System.Collections.Generic.List{System.Double},LibOptimization.MathUtil.clsEasyVector.VectorDirection)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_val"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.#ctor(System.Double[],LibOptimization.MathUtil.clsEasyVector.VectorDirection)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_val"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.op_Implicit(System.Double[])~LibOptimization.MathUtil.clsEasyVector">
+	<summary>
+ Type convert
+ </summary>
+	<param name="ai_ar"></param>
+	<returns></returns>
+	<remarks>
+ double() -&gt; clsShoddyVector
+ </remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.op_Addition(LibOptimization.MathUtil.clsEasyVector,LibOptimization.MathUtil.clsEasyVector)">
+	<summary>
+ Add
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.op_Subtraction(LibOptimization.MathUtil.clsEasyVector,LibOptimization.MathUtil.clsEasyVector)">
+	<summary>
+ Diff
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.InnerProduct(LibOptimization.MathUtil.clsEasyVector)">
+	<summary>
+ Product(Inner product, dot product)
+ </summary>
+	<param name="ai_source"></param>
+	<returns></returns>
+	<remarks>
+ a dot b = |a||b|cos(theta)
+ </remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.op_Multiply(System.Double,LibOptimization.MathUtil.clsEasyVector)">
+	<summary>
+ Product
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.op_Multiply(LibOptimization.MathUtil.clsEasyVector,System.Double)">
+	<summary>
+ Product
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.op_Division(System.Double,LibOptimization.MathUtil.clsEasyVector)">
+	<summary>
+ Divide
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.op_Division(LibOptimization.MathUtil.clsEasyVector,System.Double)">
+	<summary>
+ Divide
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.op_Exponent(LibOptimization.MathUtil.clsEasyVector,System.Double)">
+	<summary>
+ Power(exponentiation)
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.SetList(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Set List(Of double)
+ </summary>
+	<param name="ai_list"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.SetList(System.Double[])">
+	<summary>
+ Set Double()
+ </summary>
+	<param name="ai_list"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.ToMatrix">
+	<summary>
+ To Matrix
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.NormL1">
+	<summary>
+ Norm L1 ( |x1| + |x2| ... )
+ </summary>
+	<returns></returns>
+	<remarks>
+ |x|1
+ Refference:
+ 皆本晃弥, "C言語による「数値計算入門」～ 解法・アルゴリズム・プログラム ～", サイエンス社 2008年 初版第4刷, pp28-32
+ </remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.NormL2">
+	<summary>
+ Norm L2 ( Sqrt( x1^2 + x2^2 ... ) )
+ </summary>
+	<returns></returns>
+	<remarks>
+ ||x||
+ Refference:
+ 皆本晃弥, "C言語による「数値計算入門」～ 解法・アルゴリズム・プログラム ～", サイエンス社 2008年 初版第4刷, pp28-32
+ </remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.NormMax">
+	<summary>
+ NormMax
+ </summary>
+	<returns></returns>
+	<remarks>
+ |x|max
+ Refference:
+ 皆本晃弥, "C言語による「数値計算入門」～ 解法・アルゴリズム・プログラム ～", サイエンス社 2008年 初版第4刷, pp28-32
+ </remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.T">
+	<summary>
+ Transpose
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.Sum">
+	<summary>
+ Sum
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.Average">
+	<summary>
+ Average
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.PrintValue(System.Int32)">
+	<summary>
+ For Debug
+ </summary>
+	<param name="ai_preci"></param>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.MathUtil.clsEasyVector.RawVector">
+	<summary>
+ Accessor 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.MathUtil.clsEasyVector.Direction">
+	<summary>
+ Vector direction
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyVector.IsSameDimension(LibOptimization.MathUtil.clsEasyVector,LibOptimization.MathUtil.clsEasyVector)">
+	<summary>
+ CheckDimension
+ </summary>
+	<param name="ai_vec1"></param>
+	<param name="ai_vec2"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.MathUtil.clsEasyVector">
+	<summary>
+ Vector class
+ </summary>
+	<remarks>
+ Inherits List(of double)
+ </remarks>
+</member><member name="F:LibOptimization.Optimization.absOptimization.m_func">
+	<summary>Objective function</summary>
+</member><member name="F:LibOptimization.Optimization.absOptimization.m_iteration">
+	<summary>Iteration count</summary>
+</member><member name="F:LibOptimization.Optimization.absOptimization.m_rand">
+	<summary>Random object</summary>
+</member><member name="F:LibOptimization.Optimization.absOptimization.m_error">
+	<summary>Error manage class</summary>
+</member><member name="P:LibOptimization.Optimization.absOptimization.InitialValueRange">
+	<summary>Range of initial value</summary>
+	<remarks>This parameters to use when generate a variable</remarks>
+</member><member name="P:LibOptimization.Optimization.absOptimization.InitialPosition">
+	<summary>Initial position</summary>
+</member><member name="P:LibOptimization.Optimization.absOptimization.ObjectiveFunction">
+	<summary>
+ Objective function Property
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.absOptimization.Random">
+	<summary>
+ Random object Property
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.absOptimization.Init">
+	<summary>
+ Initialize parameter
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.absOptimization.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>true:Stopping Criterion. false:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.absOptimization.Result">
+	<summary>
+ Result
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.absOptimization.Results">
+	<summary>
+ Results
+ </summary>
+	<returns></returns>
+	<remarks>
+ Get all result.
+ Do not need to implement this method.
+ e.g)Throw New NotImplementedException
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.absOptimization.IsRecentError">
+	<summary>
+ Recent Error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.absOptimization.IterationCount">
+	<summary>
+ Iteration count 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.absOptimization.ResetIterationCount">
+	<summary>
+ Reset Iteration count
+ </summary>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.absOptimization">
+	<summary>
+ Abstarct optimization Class
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchRidge.#ctor(System.Int32)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchRidge.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="ai_var"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchRidge">
+	<summary>
+ Benchmark function
+ Ridge Function
+ </summary>
+	<remarks>
+ Minimum:
+  F(0,...,0) = 0
+ Range:
+  -5.12 to 5.12
+ Referrence:
+ http://mikilab.doshisha.ac.jp/dia/research/pdga/archive/doc/ga2k_performance.pdf
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGABLX.Iteration">
+	<summary>Max iteration count(Default:20000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGABLX.EPS">
+	<summary>Epsilon(Default:1e-8) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGABLX.IsUseCriterion">
+	<summary>Use criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGABLX.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGABLX.PopulationSize">
+	<summary>Population Size(Default:dimension*50)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGABLX.ChildrenSize">
+	<summary>Children Size(Default:dimension*20)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGABLX.Alpha">
+	<summary>Alpha is expantion ratio(Default:0.5)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptRealGABLX.m_parents">
+	<summary>population</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGABLX.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Optimize Function</param>
+	<remarks>
+ "n" is function dimension.
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGABLX.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGABLX.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGABLX.UseEliteStrategy(System.Double)">
+	<summary>
+ using Elite Strategy
+ </summary>
+	<param name="ai_density">density</param>
+	<remarks>
+ Elite strategy
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGABLX.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGABLX.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGABLX.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptRealGABLX">
+	<summary>
+ Real-coded Genetic Algorithm
+ BLX-Alpha + JGG
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+  -Alternation of generation algorithm is JGG.
+ 
+ Refference:
+ 北野宏明 (編集), "遺伝的アルゴリズム 4", 産業図書出版株式会社, 2000年初版
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSO.Iteration">
+	<summary>Max iteration count(Default:20000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSO.EPS">
+	<summary>Epsilon(Default:0.000001) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSO.IsUseCriterion">
+	<summary>Use criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSO.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSO.SwarmSize">
+	<summary>Swarm Size(Default:100)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSO.Weight">
+	<summary>Inertia weight. Weigth=1.0(orignal paper 1995), Weight=0.729(Default setting)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSO.C1">
+	<summary>velocity coefficient(affected by personal best). C1 = C2 = 2.0 (orignal paper 1995), C1 = C2 = 1.49445(Default setting)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSO.C2">
+	<summary>velocity coefficient(affected by global best). C1 = C2 = 2.0 (orignal paper 1995), C1 = C2 = 1.49445(Default setting)</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptPSO.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSO.Init">
+	<summary>
+ Initialize
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSO.DoIteration(System.Int32)">
+	<summary>
+ Do optimize
+ </summary>
+	<param name="ai_iteration"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSO.IsRecentError">
+	<summary>
+ Recent Error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSO.Result">
+	<summary>
+ Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSO.Results">
+	<summary>
+ for Debug
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptPSO">
+	<summary>
+ Basic Particle Swarm Optmization
+ </summary>
+	<remarks>
+ Features:
+  -Swarm Intelligence algorithm.
+  -Derivative free optimization algorithm.
+ 
+ Refference:
+ [1]James Kennedy and Russell Eberhart, "Particle Swarm Optimization", Proceedings of IEEE the International Conference on Neural Networks，1995
+ [2]Y. Shi and Russell Eberhart, "A Modified Particle Swarm Optimizer", Proceedings of Congress on Evolu-tionary Computation, 79-73., 1998
+ [3]R. C. Eberhart and Y. Shi, "Comparing inertia weights and constriction factors in particle swarm optimization", In Proceedings of the Congress on Evolutionary Computation, vol. 1, pp. 84–88, IEEE, La Jolla, Calif, USA, July 2000.
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptNelderMead.Iteration">
+	<summary>Max iteration count(Default:5,000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptNelderMead.EPS">
+	<summary>Epsilon(Default:0.000001) for Criterion</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptNelderMead.Refrection">
+	<summary>Refrection coeffcient(default:1.0)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptNelderMead.Expantion">
+	<summary>Expantion coeffcient(default:2.0)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptNelderMead.Contraction">
+	<summary>Contraction coeffcient(default:0.5)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptNelderMead.Shrink">
+	<summary>Shrink coeffcient(default:2.0)</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Optimize Function</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks>
+ All vertexs are made at random.
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.Init(System.Double[][])">
+	<summary>
+ Init
+ </summary>
+	<param name="ai_initPoint"></param>
+	<remarks>
+ Set simplex
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.DoIteration(System.Int32)">
+	<summary>
+ Do optimization
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptNelderMead.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.GetLastErrorInfomation">
+	<summary>
+ Get recent error infomation
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptNelderMead.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.GetCentroid(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint})">
+	<summary>
+ Calc Centroid
+ </summary>
+	<param name="ai_vertexs"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.CalcRefrection(LibOptimization.Optimization.clsPoint,LibOptimization.Optimization.clsPoint,System.Double)">
+	<summary>
+ Refrection
+ </summary>
+	<param name="ai_tgt">Target vertex</param>
+	<param name="ai_base">Base vertex</param>
+	<param name="ai_coeff">Expantion coeffcient. Recommned value 1.0</param>
+	<returns></returns>
+	<remarks>
+ xr = (1 + alpha)¯x - p
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.CalcExpantion(LibOptimization.Optimization.clsPoint,LibOptimization.Optimization.clsPoint,System.Double)">
+	<summary>
+ Expantion
+ </summary>
+	<param name="ai_tgt">Target vertex</param>
+	<param name="ai_base">Base vertex</param>
+	<param name="ai_coeff">Expantion coeffcient. Recommned value 2.0</param>
+	<returns></returns>
+	<remarks>
+ xe = gamma * p + (1 - gamma)¯x
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.CalcContraction(LibOptimization.Optimization.clsPoint,LibOptimization.Optimization.clsPoint,System.Double)">
+	<summary>
+ Contraction
+ </summary>
+	<param name="ai_tgt">Target vertex</param>
+	<param name="ai_base">Base vertex</param>
+	<param name="ai_coeff">Constraction coeffcient. Recommned value 0.5</param>
+	<returns></returns>
+	<remarks>
+ xc = beta * p + (1 - beta)¯x
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptNelderMead.CalcShrink(System.Double)">
+	<summary>
+ Shrink(All point replace)
+ </summary>
+	<param name="ai_coeff">Shrink coeffcient.</param>
+	<remarks>
+	</remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptNelderMead">
+	<summary>
+ Nelder Mead Method
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+  -Also known as "Down hill simplex" or "simplex method".
+  -Implementation according to the original paper.
+ 
+ Reffrence:
+ J.A.Nelder and R.Mead, "A Simplex Method for Function Minimization", The Computer Journal vol.7, 308–313 (1965)
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchSchwefel.#ctor(System.Int32)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchSchwefel.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchSchwefel">
+	<summary>
+ Benchmark function
+ Schwefel function
+ </summary>
+	<remarks>
+ Minimum:
+  F(420.96875,...,420.96875) = 0
+ Range:
+  -512 to 512
+ Referrence:
+ http://mikilab.doshisha.ac.jp/dia/research/pdga/archive/doc/ga2k_performance.pdf
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction1.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction1.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction1">
+	<summary>
+ Benchmark function
+ De Jong’s function 1 (Sphere Function)
+ </summary>
+	<remarks>
+ Minimum:
+  F(0, 0, 0) = 0
+ Range
+  -5.12 ~ 5.12 
+ Refference:
+  De Jong, K. A., "Analysis of the Behavior of a Class of Genetic Adaptive Systems", PhD dissertation, The University of Michigan, Computer and Communication Sciences Department (1975)
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptSimulatedAnnealing.Iteration">
+	<summary>Max iteration count(Default:20000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptSimulatedAnnealing.EPS">
+	<summary>Epsilon(Default:1e-8) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptSimulatedAnnealing.CoolingRatio">
+	<summary>cooling ratio</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptSimulatedAnnealing.NeighborRange">
+	<summary>range of neighbor search</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptSimulatedAnnealing.Temperature">
+	<summary>start temperature</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptSimulatedAnnealing.EndTemperature">
+	<summary>end temperature</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptSimulatedAnnealing.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptSimulatedAnnealing.Init">
+	<summary>
+ Initialize
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptSimulatedAnnealing.DoIteration(System.Int32)">
+	<summary>
+ Do optimization
+ </summary>
+	<param name="ai_iteration"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptSimulatedAnnealing.IsRecentError">
+	<summary>
+ Recent Error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptSimulatedAnnealing.Result">
+	<summary>
+ Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptSimulatedAnnealing.Results">
+	<summary>
+ for Debug
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptSimulatedAnnealing">
+	<summary>
+ Simulated Annealing
+ </summary>
+	<remarks>
+ Features:
+  -Randomized algorithm for optimization.
+ 
+ Reffrence:
+ http://ja.wikipedia.org/wiki/%E7%84%BC%E3%81%8D%E3%81%AA%E3%81%BE%E3%81%97%E6%B3%95
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchBoothFunction.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchBoothFunction.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchBoothFunction">
+	<summary>
+ Benchmark function
+ Booth Function
+ </summary>
+	<remarks>
+ Minimum:
+  F(1,3) = 0
+ Range:
+  -10 to 10
+ Referrence:
+ http://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO_files/Page816.htm
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction2.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction2.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction2">
+	<summary>
+ Benchmark function
+ De Jong’s function 2 (2D Rosenblock Function)
+ </summary>
+	<remarks>
+ Minimum:
+  F(1, 1) = 0
+ Range
+  -2.048 ~ 2.048
+ Refference:
+  De Jong, K. A., "Analysis of the Behavior of a Class of Genetic Adaptive Systems", PhD dissertation, The University of Michigan, Computer and Communication Sciences Department (1975)
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction3.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction3.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction3">
+	<summary>
+ Benchmark function
+ De Jong’s function 3 (Step Function)
+ </summary>
+	<remarks>
+ Minimum:
+  x = {-5.12~-5, -5.12~-5, -5.12~-5, -5.12~-5, -5.12~-5}
+ Range
+  -5.12 ~ 5.12 
+ Refference:
+  De Jong, K. A., "Analysis of the Behavior of a Class of Genetic Adaptive Systems", PhD dissertation, The University of Michigan, Computer and Communication Sciences Department (1975)
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptCS.EPS">
+	<summary>
+ epsilon(Default:1e-8) for Criterion
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptCS.IsUseCriterion">
+	<summary>
+ Use criterion
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptCS.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptCS.Iteration">
+	<summary>
+ Max iteration count
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptCS.PopulationSize">
+	<summary>
+ Population Size(Default:25)
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptCS.PA">
+	<summary>
+ Discovery rate(Default:0.25)
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptCS.Beta">
+	<summary>
+ Levy flight parameter(Default:1.5)
+ </summary>
+</member><member name="M:LibOptimization.Optimization.clsOptCS.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Optimize Function</param>
+	<remarks>
+ "n" is function dimension.
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptCS.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptCS.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptCS.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptCS.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptCS.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptCS.LogGamma(System.Double)">
+	<summary>
+ Log Gamma function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks>
+ Refference:
+ C言語による最新アルゴリズム事典
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptCS.Gamma(System.Double)">
+	<summary>
+ Gamma function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks>
+ Refference:
+ C言語による最新アルゴリズム事典
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptCS.FindCurrentIndex(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint})">
+	<summary>
+ Find current best index from List(of clsPoint)
+ </summary>
+	<param name="ai_nests"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptCS">
+	<summary>
+ Standard Cuckoo Search
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+ 
+ Refference:
+ [1]Xin-She Yang, Suash Deb, "Cuckoo search via Lévy flights.", World Congress on Nature and Biologically Inspired Computing (NaBIC 2009). IEEE Publications. pp. 210–214. arXiv:1003.1594v1.
+ [2]Cuckoo Search (CS) Algorithm
+    http://www.mathworks.com/matlabcentral/fileexchange/29809-cuckoo-search--cs--algorithm
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction4.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction4.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction4">
+	<summary>
+ Benchmark function
+ De Jong’s function 4 (qudratic with gauss Function)
+ </summary>
+	<remarks>
+ Minimum:
+  x = {0, ..., 0}
+ Range
+  -1.28 ~ 1.28
+ Refference:
+  De Jong, K. A., "Analysis of the Behavior of a Class of Genetic Adaptive Systems", PhD dissertation, The University of Michigan, Computer and Communication Sciences Department (1975)
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchSchaffer.#ctor(System.Int32)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchSchaffer.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="ai_var"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchSchaffer">
+	<summary>
+ Benchmark function
+ Schaffer function
+ </summary>
+	<remarks>
+ Minimum:
+  F(0,...,0) = 0
+ Range:
+  -100 to 100
+ Referrence:
+ 小林重信, "実数値GAのフロンティア"，人工知能学会誌 Vol. 24, No. 1, pp.147-162 (2009)
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction5.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction5.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchDeJongFunction5">
+	<summary>
+ Benchmark function
+ De Jong’s function 5
+ </summary>
+	<remarks>
+ Minimum:
+  x = {-32,-32}
+  f(x) ~ 1
+ Range
+  -65.536 ~ 65.536
+ Refference:
+  De Jong, K. A., "Analysis of the Behavior of a Class of Genetic Adaptive Systems", PhD dissertation, The University of Michigan, Computer and Communication Sciences Department (1975)
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchPowell.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchPowell.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="ai_var"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchPowell">
+	<summary>
+ Benchmark function
+ Powell function
+ </summary>
+	<remarks>
+ Minimum:
+  F(0,0,0,0) = 0
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.EPS">
+	<summary>epsilon(Default:1e-8) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.IsUseCriterion">
+	<summary>Use criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.Iteration">
+	<summary>
+ Max iteration count
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.UpperBounds">
+	<summary>Upper bound(limit solution space)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.LowerBounds">
+	<summary>Lower bound(limit solution space)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.PopulationSize">
+	<summary>
+ Population Size(Default:100)
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.F">
+	<summary>
+ Differential weight(Scaling factor)(Default:0.5)
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.CrossOverRatio">
+	<summary>
+ Cross over ratio(Default:0.9)
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.DEStrategy">
+	<summary>
+ Differential Evolution Strategy
+ </summary>
+</member><member name="F:LibOptimization.Optimization.clsOptDE.EnumDEStrategyType.DE_rand_1_bin">
+	<summary>DE/rand/1/bin</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptDE.EnumDEStrategyType.DE_best_1_bin">
+	<summary>DE/best/1/bin</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptDE.EnumDEStrategyType.DE_best_2_bin">
+	<summary>DE/best/2/bin</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptDE.EnumDEStrategyType.DE_rand_2_bin">
+	<summary>DE/rand/2/bin</summary>
+</member><member name="T:LibOptimization.Optimization.clsOptDE.EnumDEStrategyType">
+	<summary>
+ Enum Differential Evolution Strategy
+ </summary>
+</member><member name="F:LibOptimization.Optimization.clsOptDE.m_parents">
+	<summary>population</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptDE.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Objective Function</param>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptDE.#ctor(LibOptimization.Optimization.absObjectiveFunction,LibOptimization.Optimization.clsOptDE.EnumDEStrategyType)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Objective Function</param>
+	<param name="ai_destrategy">DE Strategt(e.g. DE/rand/1/bin)</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptDE.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptDE.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptDE.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptDE.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptDE">
+	<summary>
+ Differential Evolution Algorithm (DE/rand/1/bin, DE/rand/2/bin, DE/best/1/bin, DE/best/2/bin)
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+  -similar to GA algorithm.
+ 
+ Memo:
+  Notation of DE
+   DE/x/y/z
+    x: pick parent strategy(rand or best)
+    y: number of difference vector
+    z: crossover scheme
+       ex.Binomial -&gt; bin
+ 
+ Refference:
+ [1]Storn, R., Price, K., "Differential Evolution – A Simple and Efficient Heuristic for Global Optimization over Continuous Spaces", Journal of Global Optimization 11: 341–359.
+ [2]Price, K. and Storn, R., "Minimizing the Real Functions of the ICEC’96 contest by Differential Evolution", IEEE International Conference on Evolutionary Computation (ICEC’96), may 1996, pp. 842–844.
+ [3]Sk. Minhazul Islam, Swagatam Das, "An Adaptive Differential Evolution Algorithm With Novel Mutation and Crossover Strategies for Global Numerical Optimization", IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART B: CYBERNETICS, VOL. 42, NO. 2, APRIL 2012, pp482-500.
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsParticle.#ctor">
+	<summary>
+ Default construtor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsParticle.#ctor(LibOptimization.Optimization.clsPoint,System.Double[],LibOptimization.Optimization.clsPoint)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_point"></param>
+	<param name="ai_velocity"></param>
+	<param name="ai_bestPoint"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsParticle.#ctor(LibOptimization.Optimization.clsParticle)">
+	<summary>
+ Copy Constructor
+ </summary>
+	<param name="ai_particle"></param>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsParticle.Point">
+	<summary>
+ Point
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsParticle.Velocity">
+	<summary>
+ Velocity
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsParticle.BestPoint">
+	<summary>
+ BestPoint
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsParticle.CompareTo(System.Object)">
+	<summary>
+ for sort
+ </summary>
+	<param name="ai_obj"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsParticle">
+	<summary>
+ Particle class for PSO
+ </summary>
+	<remarks>
+ for Swarm Particle Optimization
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPatternSearch.Iteration">
+	<summary>Max iteration count(Default:20000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPatternSearch.EPS">
+	<summary>Epsilon(Default:0.000001) for Criterion</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptPatternSearch.StepLength">
+	<summary>step length(Default:0.6)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptPatternSearch.Shrink">
+	<summary>shrink parameter(Default:2.0)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptPatternSearch.m_stepLength">
+	<summary>current step length</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptPatternSearch.m_base">
+	<summary>current base</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptPatternSearch.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Optimize Function</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPatternSearch.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPatternSearch.Init(System.Double[])">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPatternSearch.DoIteration(System.Int32)">
+	<summary>
+ Do optimization
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPatternSearch.MakeExploratoryMoves(LibOptimization.Optimization.clsPoint,System.Double)">
+	<summary>
+ Exploratory Move
+ </summary>
+	<param name="ai_base">Base point</param>
+	<param name="ai_stepLength">Step</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPatternSearch.MakePatternMove(LibOptimization.Optimization.clsPoint,LibOptimization.Optimization.clsPoint)">
+	<summary>
+ Pattern Move
+ </summary>
+	<param name="ai_previousBasePoint"></param>
+	<param name="ai_base"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPatternSearch.Result">
+	<summary>
+ Result
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPatternSearch.Results">
+	<summary>
+ Base with length
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPatternSearch.GetLastErrorInfomation">
+	<summary>
+ Get recent error infomation
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPatternSearch.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptPatternSearch">
+	<summary>
+ Hooke-Jeeves Pattern Search Method
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+ 
+ Reffrence:
+ Hooke, R. and Jeeves, T.A., ""Direct search" solution of numerical and statistical problems", Journal of the Association for Computing Machinery (ACM) 8 (2), pp212–229.
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.Iteration">
+	<summary>Max iteration count(Default:20000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.EPS">
+	<summary>Epsilon(Default:0.000001) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.IsUseCriterion">
+	<summary>Use criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.SwarmSize">
+	<summary>Swarm Size(Default:100)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.Weight">
+	<summary>adaptive inertia weight(Default:1.0)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.WeightMax">
+	<summary>Weight max for adaptive weight(Default:1.0).</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.WeightMin">
+	<summary>Weight min for adaptive weight(Default:0.0).</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.C1">
+	<summary>velocity coefficient(affected by personal best)(Default:1.49445)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.C2">
+	<summary>velocity coefficient(affected by global best)(Default:1.49445)</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOAIW.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOAIW.Init">
+	<summary>
+ Initialize
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOAIW.DoIteration(System.Int32)">
+	<summary>
+ Do optimize
+ </summary>
+	<param name="ai_iteration"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptPSOAIW.IsRecentError">
+	<summary>
+ Recent Error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.Result">
+	<summary>
+ Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptPSOAIW.Results">
+	<summary>
+ for Debug
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptPSOAIW">
+	<summary>
+ Particle Swarm Optmization using Adaptive Inertia Weight(AIW-PSO)
+ AdaptW
+ </summary>
+	<remarks>
+ Features:
+  -Swarm Intelligence algorithm.
+  -Derivative free optimization algorithm.
+ 
+ Refference:
+ [1]A. Nickabadi, M. M. Ebadzadeh, and R. Safabakhsh, “A novel particle swarm optimization algorithm with adaptive inertia weight,” Applied Soft Computing Journal, vol. 11, no. 4, pp. 3658–3670, 2011.
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAPCX.EPS">
+	<summary>epsilon(Default:1e-8) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAPCX.IsUseCriterion">
+	<summary>Use criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAPCX.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAPCX.Iteration">
+	<summary>Max iteration count</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAPCX.PopulationSize">
+	<summary>Population Size(Default:100)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAPCX.ChildrenSize">
+	<summary>Children size(Default:3)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAPCX.Eta">
+	<summary>Randomize parameter Eta(Default:0.1)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAPCX.Zeta">
+	<summary>Randomize parameter Zeta(Default:0.1)</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptRealGAPCX.m_population">
+	<summary>population</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAPCX.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Optimize Function</param>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAPCX.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAPCX.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAPCX.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAPCX.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAPCX.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAPCX.SelectParentsForG3(System.Int32,System.Collections.Generic.List{System.Int32}@,System.Collections.Generic.List{LibOptimization.Optimization.clsPoint}@)">
+	<summary>
+ Select parent for G3(Genelized Generation Gap)
+ </summary>
+	<param name="ai_pickN"></param>
+	<param name="ao_parentIndex"></param>
+	<param name="ao_retParents"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAPCX.CrossoverPCX(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint},System.Int32,System.Int32)">
+	<summary>
+ Crossover PCX
+ </summary>
+	<param name="ai_parents"></param>
+	<param name="ai_childrenSize"></param>
+	<param name="ai_pickParentNo"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptRealGAPCX">
+	<summary>
+ Real-coded Genetic Algorithm
+ Parent Centric Recombination(PCX)
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+  -Cross over algorithm is PCX.
+  -Alternation of generation algorithm is G3.
+ 
+ Refference:
+ [1]Kalyanmoy Deb, Dhiraj Joshi and Ashish Anand, "Real-Coded Evolutionary Algorithms with Parent-Centric Recombination", KanGAL Report No. 2001003
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchSphere.#ctor(System.Int32)">
+	<summary>
+ Default constructor
+ </summary>
+	<param name="ai_dim">Set dimension</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchSphere.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="ai_var"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchSphere">
+	<summary>
+ Benchmark function
+ Sphere Function
+ </summary>
+	<remarks>
+ Minimum:
+  F(0,...,0) = 0
+ Range:
+  -5.12 to 5.12
+ Referrence:
+ http://mikilab.doshisha.ac.jp/dia/research/pdga/archive/doc/ga2k_performance.pdf
+ </remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.#ctor">
+	<summary>
+ Default construcotr
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.#ctor(LibOptimization.MathUtil.clsEasyMatrix)">
+	<summary>
+ Copy constructor
+ </summary>
+	<param name="ai_base"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.#ctor(System.Int32,System.Boolean)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_dim"></param>
+	<param name="ai_isIdentity">Make Identify matrix</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_rowSize"></param>
+	<param name="ai_colSize"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.#ctor(System.Collections.Generic.List{System.Collections.Generic.List{System.Double}})">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_val"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.#ctor(System.Double[][])">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_val"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.#ctor(System.Collections.Generic.List{System.Double},LibOptimization.MathUtil.clsEasyVector.VectorDirection)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_val"></param>
+	<param name="ai_direction">Row or Col</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Addition(LibOptimization.MathUtil.clsEasyMatrix,LibOptimization.MathUtil.clsEasyMatrix)">
+	<summary>
+ Add(Matrix + Matrix)
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Addition(LibOptimization.MathUtil.clsEasyMatrix,LibOptimization.MathUtil.clsEasyVector)">
+	<summary>s
+ Add(Matrix + Vector)
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Addition(LibOptimization.MathUtil.clsEasyVector,LibOptimization.MathUtil.clsEasyMatrix)">
+	<summary>
+ Add(Vector + Matrix)
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Subtraction(LibOptimization.MathUtil.clsEasyMatrix,LibOptimization.MathUtil.clsEasyMatrix)">
+	<summary>
+ Diff
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Subtraction(LibOptimization.MathUtil.clsEasyMatrix,LibOptimization.MathUtil.clsEasyVector)">
+	<summary>
+ Diff(Matrix + Vector)
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Subtraction(LibOptimization.MathUtil.clsEasyVector,LibOptimization.MathUtil.clsEasyMatrix)">
+	<summary>
+ Diff(Vector + Matrix)
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Multiply(LibOptimization.MathUtil.clsEasyMatrix,LibOptimization.MathUtil.clsEasyMatrix)">
+	<summary>
+ Product( Matrix * Matrix )
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Multiply(LibOptimization.MathUtil.clsEasyMatrix,LibOptimization.MathUtil.clsEasyVector)">
+	<summary>
+ Product( Matrix * Vector )
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Multiply(LibOptimization.MathUtil.clsEasyVector,LibOptimization.MathUtil.clsEasyMatrix)">
+	<summary>
+ Product(Vector * Matrix)
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Multiply(System.Double,LibOptimization.MathUtil.clsEasyMatrix)">
+	<summary>
+ Product(value * Matrix)
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.op_Multiply(LibOptimization.MathUtil.clsEasyMatrix,System.Double)">
+	<summary>
+ Product(Matrix * value)
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.T">
+	<summary>
+ Transpose
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.Det(System.Boolean)">
+	<summary>
+ Determinant
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.Diag">
+	<summary>
+ Diagonal matrix
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.Inverse">
+	<summary>
+ Inverse
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.SwapRow(System.Int32,System.Int32)">
+	<summary>
+ Swap Row
+ </summary>
+	<param name="ai_sourceRowIndex"></param>
+	<param name="ai_destRowIndex"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.SwapCol(System.Int32,System.Int32)">
+	<summary>
+ Swap Col
+ </summary>
+	<param name="ai_sourceColIndex"></param>
+	<param name="ai_destColIndex"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.PrintValue(System.Int32)">
+	<summary>
+ For Debug
+ </summary>
+	<param name="ai_preci"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.ToVector">
+	<summary>
+ To Vector
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.IsSquare">
+	<summary>
+ 正方行列判定
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.MathUtil.clsEasyMatrix.RowCount">
+	<summary>
+ Get Row count
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.MathUtil.clsEasyMatrix.ColCount">
+	<summary>
+ Get Collumn count
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.MathUtil.clsEasyMatrix.Row(System.Int32)">
+	<summary>
+ Row accessor
+ </summary>
+	<param name="ai_rowIndex"></param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.MathUtil.clsEasyMatrix.Column(System.Int32)">
+	<summary>
+ Column accessor
+ </summary>
+	<param name="ai_colIndex"></param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.MathUtil.clsEasyMatrix.RawMatrix">
+	<summary>
+ To List(Of List(Of Double))
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.IsSameDimension(LibOptimization.MathUtil.clsEasyMatrix,LibOptimization.MathUtil.clsEasyMatrix)">
+	<summary>
+ Check Dimension
+ </summary>
+	<param name="ai_source"></param>
+	<param name="ai_dest"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.IsComputableMatrixVector(LibOptimization.MathUtil.clsEasyMatrix,LibOptimization.MathUtil.clsEasyVector)">
+	<summary>
+ Check Matrix Vector
+ </summary>
+	<param name="ai_matrix"></param>
+	<param name="ai_vector"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsEasyMatrix.CalcDeterminant(LibOptimization.MathUtil.clsEasyMatrix,System.Int32,System.Boolean)">
+	<summary>
+ Determinant(Recursive)
+ </summary>
+	<param name="ai_clsMatrix"></param>
+	<param name="ai_dim"></param>
+	<param name="ai_isDebug"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.MathUtil.clsEasyMatrix">
+	<summary>
+ Matrix class
+ </summary>
+	<remarks>
+ Inherits List(Of List(Of Double))
+ 
+ TODO:
+ LU, Solve ,SVD
+ </remarks>
+</member><member name="M:LibOptimization.Util.clsError.clsErrorInfomation.#ctor">
+	<summary>
+ Default constructor(do not use)
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsError.clsErrorInfomation.#ctor(System.Boolean,LibOptimization.Util.clsError.ErrorType,System.String)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_setError"></param>
+	<param name="ai_errorType"></param>
+	<param name="ai_errorMsg"></param>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Util.clsError.clsErrorInfomation">
+	<summary>
+ Error infomation class
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsError.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsError.SetError(System.Boolean,LibOptimization.Util.clsError.ErrorType,System.String)">
+	<summary>
+ Set Error
+ </summary>
+	<param name="ai_setError"></param>
+	<param name="ai_errorType"></param>
+	<param name="ai_errorMsg"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsError.IsError">
+	<summary>
+ Is error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsError.GetLastErrorInfomation">
+	<summary>
+ Get Last error infomation
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsError.Clear">
+	<summary>
+ Clear error
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsError.Print(LibOptimization.Util.clsError.clsErrorInfomation)">
+	<summary>
+ Error Output
+ </summary>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Util.clsError">
+	<summary>
+ ErrorManage class
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="P:LibOptimization.Optimization.absObjectiveFunction.NumberOfVariable">
+	<summary>
+ Get number of variables
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.absObjectiveFunction.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Evaluate
+ </summary>
+	<param name="x"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.absObjectiveFunction.Gradient(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Gradient vector (for Steepest descent method, newton method)
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks>
+ ex)
+ f(x1,..,xn) = x1^2 + ... + xn^2
+ del f =  [df/dx1 , ... , df/dxn]
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.absObjectiveFunction.Hessian(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Hessian matrix (for newton method)
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks>
+ ex)
+ f(x1,x2) = x1^2 + x2^2
+ del f   =  [df/dx1 df/dx2]
+ del^2 f = [d^2f/d^2x1     d^2f/dx1dx2]
+           [d^2f/d^2dx2dx1 d^2f/d^2x2]
+ </remarks>
+</member><member name="T:LibOptimization.Optimization.absObjectiveFunction">
+	<summary>
+ Abstarct objective function class
+ </summary>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.Iteration">
+	<summary>Max iteration count(Default:20000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.EPS">
+	<summary>Epsilon(Default:1e-8) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.IsUseCriterion">
+	<summary>Use criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.m_parents">
+	<summary>population</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.PopulationSize">
+	<summary>Population Size(Default:50*Log(n)+10)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.ParentSize">
+	<summary>Parent size for cross over(Default:n+1)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.ChildrenSize">
+	<summary>Children Size(Default30*Log(n)+10)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.RandomMode">
+	<summary>REX randomo mode(Default:UNIFORM)</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAREX.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Target Function</param>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAREX.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAREX.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAREX.UseEliteStrategy(System.Double)">
+	<summary>
+ using Elite Strategy
+ </summary>
+	<param name="ai_density">density</param>
+	<remarks>
+ Elite strategy
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAREX.SelectParent(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint},System.Int32)">
+	<summary>
+ Select Parent
+ </summary>
+	<param name="ai_population"></param>
+	<param name="ai_parentSize"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAREX.CrossOverREX(LibOptimization.Optimization.clsOptRealGAREX.RexRandomMode,System.Int32,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.Int32,LibOptimization.Optimization.clsPoint}})">
+	<summary>
+ REX(Real-coded Ensemble Crossover)
+ </summary>
+	<param name="ai_randomMode"></param>
+	<param name="ai_childNum">ChildNum</param>
+	<param name="ai_parents"></param>
+	<returns></returns>
+	<remarks>
+ REX(U, n+k) -&gt; U is UniformRandom
+ REX(N, n+k) -&gt; N is NormalDistribution
+ "n+k" is parents size.
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAREX.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAREX.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptRealGAREX">
+	<summary>
+ Real-coded Genetic Algorithm
+ REX(Real-coded Ensemble Crossover) + JGG
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+  -Cross over algorithm is REX(Real-coded Ensemble Cross over).
+  -Alternation of generation algorithm is JGG.
+ 
+ Refference:
+ 小林重信, "実数値GAのフロンティア"，人工知能学会誌 Vol. 24, No. 1, pp.147-162 (2009)
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptSteepestDescent.Iteration">
+	<summary>Max iteration count(Default:1000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptSteepestDescent.EPS">
+	<summary>Epsilon(Default:1e-8) for Criterion</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptSteepestDescent.ALPHA">
+	<summary>rate</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptSteepestDescent.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Optimize Function</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptSteepestDescent.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptSteepestDescent.Init(System.Double[])">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptSteepestDescent.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptSteepestDescent.Result">
+	<summary>
+ Result
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptSteepestDescent.Results">
+	<summary>
+ Result for debug.(not implementation)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptSteepestDescent.GetLastErrorInfomation">
+	<summary>
+ Get recent error infomation
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptSteepestDescent.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptSteepestDescent">
+	<summary>
+ Steepest descent method
+ </summary>
+	<remarks>
+ Features:
+  -Use first derivertive.
+  -First order conversion.
+ 
+ Refference:
+ [1]http://dsl4.eee.u-ryukyu.ac.jp/DOCS/nlp/node4.html
+ [2]金谷健一, "これならわかる最適化数学－基礎原理から計算手法まで－", 共立出版株式会社 2007 初版第7刷, pp79-84 
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ 
+ Memo:
+ 最適化で微分を用いて求める手法のことを「勾配法」という。
+ 最大値を求めることを山登り法、最小値の場合は最急降下法とよばれる。
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.Iteration">
+	<summary>Max iteration count(Default:20000)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.EPS">
+	<summary>Epsilon(Default:1e-8) for Criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.IsUseCriterion">
+	<summary>Use criterion</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.HigherNPercent">
+	<summary>
+ higher N percentage particles are finished at the time of same evaluate value.
+ This parameter is valid is when IsUseCriterion is true.
+ </summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.PopulationSize">
+	<summary>Population Size(Default:n*33)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.ChildrenSize">
+	<summary>Children size( = Number of CrossOver/2 )(Default:n*10)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.ALPHA">
+	<summary>Alpha(Default:0.5)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.BETA">
+	<summary>Beta(Default:0.35)</summary>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.AlternationStrategy">
+	<summary>AlternationStrategy(Default:JGG)</summary>
+</member><member name="T:LibOptimization.Optimization.clsOptRealGAUNDX.EnumAlternatioType">
+	<summary>alternation strategy</summary>
+</member><member name="F:LibOptimization.Optimization.clsOptRealGAUNDX.m_parents">
+	<summary>population</summary>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAUNDX.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_func">Optimize Function</param>
+	<remarks>
+ "n" is function dimension.
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAUNDX.Init">
+	<summary>
+ Init
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAUNDX.DoIteration(System.Int32)">
+	<summary>
+ Do Iteration
+ </summary>
+	<param name="ai_iteration">Iteration count. When you set zero, use the default value.</param>
+	<returns>True:Stopping Criterion. False:Do not Stopping Criterion</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAUNDX.SelectRoulette(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint},System.Boolean)">
+	<summary>
+ RouletteWheel Selection 
+ </summary>
+	<param name="ai_chidren"></param>
+	<param name="isForMinimize"></param>
+	<returns>index</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAUNDX.UseEliteStrategy(System.Double)">
+	<summary>
+ using Elite Strategy
+ </summary>
+	<param name="ai_density">density</param>
+	<remarks>
+ Elite strategy
+ </remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.Result">
+	<summary>
+ Best result
+ </summary>
+	<returns>Best point class</returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAUNDX.IsRecentError">
+	<summary>
+ Get recent error
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsOptRealGAUNDX.Results">
+	<summary>
+ All Result
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ for Debug
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAUNDX.CalcTriangleArea(System.Double,System.Double,System.Double)">
+	<summary>
+ Calc Triangle Area using Heron formula
+ </summary>
+	<param name="lengthA"></param>
+	<param name="lengthB"></param>
+	<param name="lengthC"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsOptRealGAUNDX.UNDX(LibOptimization.Optimization.clsPoint,LibOptimization.Optimization.clsPoint,LibOptimization.Optimization.clsPoint)">
+	<summary>
+ UNDX CrossOver
+ </summary>
+	<param name="p1"></param>
+	<param name="p2"></param>
+	<param name="p3"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsOptRealGAUNDX">
+	<summary>
+ Real-coded Genetic Algorithm
+ UNDX(Unimodal Normal Distribution Crossover)
+ </summary>
+	<remarks>
+ Features:
+  -Derivative free optimization algorithm.
+  -Alternation of generation algorithm is JGG
+ 
+ Refference:
+ [1]小野功，佐藤浩，小林重信, "単峰性正規分布交叉UNDXを用いた実数値GAによる関数最適化"，人工知能学会誌，Vol. 14，No. 6，pp. 1146-1155 (1999)
+ [2]北野 宏明 (編集), 遺伝的アルゴリズム 4, 産業図書出版株式会社, 2000年 初版, p261
+ 
+ Implment:
+ N.Tomi(tomi.nori+github at gmail.com)
+ </remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.NormRand(System.Double,System.Double)">
+	<summary>
+ Normal Distribution
+ </summary>
+	<param name="ai_ave">Average</param>
+	<param name="ai_sigma2">Varianse s^2</param>
+	<returns></returns>
+	<remarks>
+ using Box-Muller method
+ </remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.RandomPermutaion(System.Int32)">
+	<summary>
+ Generate Random permutation
+ </summary>
+	<param name="ai_max"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.RandomPermutaion(System.Int32,System.Int32)">
+	<summary>
+ Generate Random permutation with Remove
+ </summary>
+	<param name="ai_max"></param>
+	<param name="ai_removeIndex">RemoveIndex</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.DebugValue(LibOptimization.Optimization.absOptimization,System.Int32,System.Boolean,System.Boolean)">
+	<summary>
+ For Debug
+ </summary>
+	<param name="ai_opt"></param>
+	<param name="ai_precision"></param>
+	<param name="ai_isOutValue"></param>
+	<param name="ai_isOnlyIterationCount"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.DebugValue(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint})">
+	<summary>
+ For Debug
+ </summary>
+	<param name="ai_results"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.IsCriterion(System.Double,LibOptimization.Optimization.clsPoint,LibOptimization.Optimization.clsPoint,System.Double)">
+	<summary>
+ Check Criterion
+ </summary>
+	<param name="ai_eps">EPS</param>
+	<param name="ai_comparisonA"></param>
+	<param name="ai_comparisonB"></param>
+	<param name="ai_tiny"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.IsCriterion(System.Double,System.Double,System.Double,System.Double)">
+	<summary>
+ Check Criterion
+ </summary>
+	<param name="ai_eps">EPS</param>
+	<param name="ai_comparisonA"></param>
+	<param name="ai_comparisonB"></param>
+	<param name="ai_tiny"></param>
+	<returns></returns>
+	<remarks>
+ Reffrence:
+ William H. Press, Saul A. Teukolsky, William T. Vetterling, Brian P. Flannery,
+ "NUMRICAL RECIPIES 3rd Edition: The Art of Scientific Computing", Cambridge University Press 2007, pp505-506
+ </remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.GenRandomRange(System.Random,System.Double,System.Double)">
+	<summary>
+ Random generator helper
+ </summary>
+	<param name="oRand"></param>
+	<param name="ai_min"></param>
+	<param name="ai_max"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.ToCSV(LibOptimization.Optimization.clsPoint)">
+	<summary>
+ to csv
+ </summary>
+	<param name="arP"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.ToCSV(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint})">
+	<summary>
+ to csv
+ </summary>
+	<param name="arP"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.ToEvalList(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint})">
+	<summary>
+ eval output for debug
+ </summary>
+	<param name="arP"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.GetSortedEvalList(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint})">
+	<summary>
+ Eval list
+ </summary>
+	<param name="arP"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.GetBestPoint(System.Collections.Generic.List{LibOptimization.Optimization.clsPoint},System.Boolean)">
+	<summary>
+ Best clsPoint
+ </summary>
+	<param name="ai_points"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsUtil.LimitSolutionSpace(LibOptimization.Optimization.clsPoint,System.Double[],System.Double[])">
+	<summary>
+ Limit solution space
+ </summary>
+	<param name="temp"></param>
+	<param name="LowerBounds"></param>
+	<param name="UpperBounds"></param>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Util.clsUtil">
+	<summary>
+ common use
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchFivewellPotential.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchFivewellPotential.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchFivewellPotential">
+	<summary>
+ Benchmark function
+ Fivewell-Potential
+ </summary>
+	<remarks>
+ Minimum:
+  F(4.92, -9.89) = -1.4616
+ Range:
+  -20 to 20
+ Referrence:
+ Ilya Pavlyukevich, "Levy flights, non-local search and simulated annealing", Journal of Computational Physics 226 (2007) 1830-1844
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchRastrigin.#ctor(System.Int32)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchRastrigin.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="ai_var"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchRastrigin">
+	<summary>
+ Benchmark function
+ Rastrigin function
+ </summary>
+	<remarks>
+ Minimum:
+  F(0,...,0) = 0
+ Range:
+  -5.12 to 5.12
+ Referrence:
+ http://mikilab.doshisha.ac.jp/dia/research/pdga/archive/doc/ga2k_performance.pdf
+ </remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchTest.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchTest.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="ai_var"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchTest">
+	<summary>
+ x1^3 + x2^3 - 0*x1*x2 + 27
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchRosenblock.#ctor(System.Int32)">
+	<summary>
+ Default constructor
+ </summary>
+	<param name="ai_dim">Set dimension</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchRosenblock.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="x"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchRosenblock">
+	<summary>
+ Benchmark function
+ Rosenblock function(Banana function)
+ </summary>
+	<remarks>
+ Minimum:
+  F(0,...,0) = 0
+ </remarks>
+</member><member name="M:LibOptimization.MathUtil.clsException.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsException.#ctor(LibOptimization.MathUtil.clsException.Series)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_series"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.MathUtil.clsException.#ctor(LibOptimization.MathUtil.clsException.Series,System.String)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="ai_series"></param>
+	<param name="ai_msg"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.#ctor(System.UInt32)">
+	<summary>
+ Constructor with seed
+ </summary>
+	<param name="ai_seed"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.SetSeed(System.UInt32)">
+	<summary>
+ Set random seed
+ </summary>
+	<param name="ai_seed"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.Next">
+	<summary>
+ Override Next
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.Next(System.Int32)">
+	<summary>
+ Override Next
+ </summary>
+	<param name="maxValue"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.Next(System.Int32,System.Int32)">
+	<summary>
+ Override Next
+ </summary>
+	<param name="minValue"></param>
+	<param name="maxValue"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.NextDouble">
+	<summary>
+ Override NextDouble
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.NextDouble(System.Double,System.Double)">
+	<summary>
+ Random double with range
+ </summary>
+	<param name="ai_min"></param>
+	<param name="ai_max"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.GetTimeSeed">
+	<summary>
+ for random seed
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.Xor128">
+	<summary>
+ Xor128
+ </summary>
+	<returns></returns>
+	<remarks>
+ C Source by refference
+  t=(xˆ(x leftshift 11));
+  x=y;
+  y=z;
+  z=w;
+  return( w=(wˆ(w rightshift 19))ˆ(tˆ(t rightshift 8)) )
+ </remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshift.RotateLeftShiftForUInteger(System.UInt32,System.Int32)">
+	<summary>
+ Rotate Shift
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Util.clsRandomXorshift">
+	<summary>
+ Xorshift random algorithm
+ Inherits System.Random
+ </summary>
+	<remarks>
+ Refference:
+ George Marsaglia, "Xorshift RNGs", Journal of Statistical Software Vol. 8, Issue 14, Jul 2003
+ </remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshiftSingleton.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshiftSingleton.GetInstance">
+	<summary>
+ Instance
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Util.clsRandomXorshiftSingleton.SetSeed(System.UInt32)">
+	<summary>
+ Set Seed
+ </summary>
+	<param name="ai_seed"></param>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Util.clsRandomXorshiftSingleton">
+	<summary>
+ Xorshift random algorithm singleton
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchAckley.#ctor(System.Int32)">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.BenchmarkFunction.clsBenchAckley.F(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Target Function
+ </summary>
+	<param name="ai_var"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.BenchmarkFunction.clsBenchAckley">
+	<summary>
+ Benchmark function
+ Ackley's function
+ </summary>
+	<remarks>
+ Minimum:
+  F(0,...,0) = 0
+ Range:
+  -32.768 to 32.768
+ Referrence:
+ 小林重信, "実数値GAのフロンティア"，人工知能学会誌 Vol. 24, No. 1, pp.147-162 (2009)
+ </remarks>
+</member><member name="P:LibOptimization.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:LibOptimization.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:LibOptimization.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:LibOptimization.Optimization.clsPoint.#ctor">
+	<summary>
+ Default constructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.#ctor(LibOptimization.Optimization.clsPoint)">
+	<summary>
+ copy constructor
+ </summary>
+	<param name="ai_vertex"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.#ctor(LibOptimization.Optimization.absObjectiveFunction)">
+	<summary>
+ constructor
+ </summary>
+	<param name="ai_func"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.#ctor(LibOptimization.Optimization.absObjectiveFunction,System.Collections.Generic.List{System.Double})">
+	<summary>
+ constructor
+ </summary>
+	<param name="ai_func"></param>
+	<param name="ai_vars"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.#ctor(LibOptimization.Optimization.absObjectiveFunction,System.Double[])">
+	<summary>
+ constructor
+ </summary>
+	<param name="ai_func"></param>
+	<param name="ai_vars"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.#ctor(LibOptimization.Optimization.absObjectiveFunction,System.Int32)">
+	<summary>
+ constructor
+ </summary>
+	<param name="ai_func"></param>
+	<param name="ai_dim"></param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.CompareTo(System.Object)">
+	<summary>
+ Compare(ICompareble)
+ </summary>
+	<param name="ai_obj"></param>
+	<returns></returns>
+	<remarks>
+ larger Me than obj is -1. smaller Me than obj is 1.
+ Equal is return to Zero
+ </remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.ReEvaluate">
+	<summary>
+ Re Evaluate
+ </summary>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.GetFunc">
+	<summary>
+ Get Function
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:LibOptimization.Optimization.clsPoint.Eval">
+	<summary>
+ EvaluateValue
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.InitValue(System.Double,System.Random)">
+	<summary>
+ Init
+ </summary>
+	<param name="ai_range">-ai_range to ai_range</param>
+	<param name="ai_rand">Random object</param>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.Copy">
+	<summary>
+ Copy clsPoint
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LibOptimization.Optimization.clsPoint.Copy(LibOptimization.Optimization.clsPoint)">
+	<summary>
+ Copy clsPoint
+ </summary>
+	<param name="ai_point"></param>
+	<remarks></remarks>
+</member><member name="T:LibOptimization.Optimization.clsPoint">
+	<summary>
+ Point Class
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
